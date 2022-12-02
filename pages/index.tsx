@@ -10,7 +10,6 @@ export default function Home({ elements }: PageProps) {
   console.log(elements);
   return (
     <>
-      <h1>help</h1>
       <h1>Periodic Table of Elements</h1>
       <div>
         {elements.map((element) => {
