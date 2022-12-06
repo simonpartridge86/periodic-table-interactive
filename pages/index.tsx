@@ -1,3 +1,4 @@
+import styles from "../styles/index.module.css";
 import { GetStaticProps } from "next";
 import ElementCard from "../components/ElementCard";
 import { Element, GetPeriodicTable } from "../types";
@@ -9,14 +10,14 @@ interface PageProps {
 export default function Home({ elements }: PageProps) {
   console.log(elements);
   return (
-    <>
+    <main className={styles.home}>
       <h1>Periodic Table of Elements</h1>
-      <div>
+      <div className={styles.table}>
         {elements.map((element) => {
           return <ElementCard key={element.atomicNumber} element={element} />;
         })}
       </div>
-    </>
+    </main>
   );
 }
 
