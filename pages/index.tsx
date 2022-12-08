@@ -8,7 +8,6 @@ interface PageProps {
 }
 
 export default function Home({ elements }: PageProps) {
-  console.log(elements);
   return (
     <main className={styles.home}>
       <h1>Periodic Table of Elements</h1>
