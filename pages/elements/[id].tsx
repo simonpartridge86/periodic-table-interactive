@@ -15,30 +15,29 @@ async function fetchData() {
 }
 
 export async function getStaticPaths() {
-  const { results } = await fetchData();
+  const results = await fetchData();
   return {
     paths: results.map((element: Element) => {
-      return { params: { id: String(element.name.toLowerCase()) } };
+      return { params: { id: String(element.name) } };
     }),
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
-  const { results } = await fetchData();
-
-  const element = results.filter(
-    (element: Element) => element.name.toLowerCase() === params.id.toLowerCase()
+  const results = await fetchData();
+  const currentElement = results.filter(
+    (element) => element.name.toLowerCase() === params.id.toLowerCase()
   );
   return {
-    props: { element },
+    props: { element: currentElement[0] },
   };
 }
 
-export default function ElementPage({ elementData }: { elementData: Element }) {
+export default function ElementPage({ element }: { element: Element }) {
   return (
     <div>
-      <h1>{elementData.name}</h1>
+      <h1>{element.name}</h1>
     </div>
   );
 }
