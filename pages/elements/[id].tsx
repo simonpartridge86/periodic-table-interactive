@@ -26,15 +26,16 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
   const results = await fetchData();
-  const currentElement = results.filter(
+  const currentElement = results.find(
     (element) => element.name.toLowerCase() === params.id.toLowerCase()
   );
   return {
-    props: { element: currentElement[0] },
+    props: { element: currentElement },
   };
 }
 
 export default function ElementPage({ element }: { element: Element }) {
+  console.log(element);
   return (
     <div>
       <h1>{element.name}</h1>
