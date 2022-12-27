@@ -8,3 +8,37 @@
     align-items: center;
     margin: 10px;
 }
+
+.nonmetal{
+    background: pink;
+}
+.metal{
+    background: blue;
+}
+.noble-gas{
+    background: yellow;
+}
+.alkali-metal{
+    background: brown;
+}
+.alkaline-earth-metal{
+    background: red;
+}
+.metalloid{
+    background: limegreen;
+}
+.halogen{
+    background: purple;
+}
+.transition-metal{
+    background: grey;
+}
+.lanthanoid {
+    background: cornflowerblue;
+}
+.actinoid{
+    background: orange;
+}
+.post-transition-metal{
+    background: midnightblue;
+}
