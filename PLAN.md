@@ -10,8 +10,9 @@ Periodic Table app plan
 - Create "groups" page, which displays element by group
   - requires filter function(s) and introduction of appropriate titles
 - Work out how to style full periodic table
-  - Filter data to introduce "empty" elements into row
-  - Need to color code based on element type (groupBlock attribute)
+  - CSS grid?
+  - Filter data to introduce "empty" elements into row?
+  - Need to color code based on element type (groupBlock attribute) ✅
 - Create navbar to go between full and group views - maybe use new Next13 layouts?
 - Further styling issues:
   - how to handle mobile view? (reduce by vertical height and allow scrolling left to right?)
