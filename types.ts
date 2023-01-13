@@ -1,6 +1,4 @@
-export interface GetPeriodicTable {
-    results: Element[]
-}
+export type GetPeriodicTable = Element[];
 
 export interface Element {
     alloys:                  string;
