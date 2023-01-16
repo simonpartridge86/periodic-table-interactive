@@ -4,17 +4,20 @@ import Link from "next/link";
 
 export default function ElementCard({
   element,
-  className,
+  block,
+  group,
 }: {
   element: Element;
-  className: String;
+  block: string;
+  group: string;
 }) {
-  const formattedClassName = className.split(" ").join("-");
+  const formattedBlock = block.split(" ").join("-");
+  const formattedGroup = `group-${group}`;
 
   return (
     <Link href={`/elements/${element.name}`}>
       <div
-        className={`${styles[formattedClassName]} ${styles["element-card"]}`}
+        className={`${styles["element-card"]} ${styles[formattedGroup]} ${styles[formattedBlock]}`}
       >
         <p>{element.atomicNumber}</p>
         <h2>{element.symbol}</h2>

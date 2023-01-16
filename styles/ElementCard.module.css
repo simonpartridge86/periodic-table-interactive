@@ -9,6 +9,78 @@
     margin: 10px;
 }
 
+.group-1{
+    grid-column-start: 1;
+}
+
+.group-2{
+    grid-column-start: 2;
+}
+
+.group-3{
+    grid-column-start: 3;
+}
+
+.group-4{
+    grid-column-start: 4;
+}
+
+.group-5{
+    grid-column-start: 5;
+}
+
+.group-6{
+    grid-column-start: 6;
+}
+
+.group-7{
+    grid-column-start: 7;
+}
+
+.group-8{
+    grid-column-start: 8;
+}
+
+.group-9{
+    grid-column-start: 9;
+}
+
+.group-10{
+    grid-column-start: 10;
+}
+
+.group-11{
+    grid-column-start: 11;
+}
+
+.group-12{
+    grid-column-start: 12;
+}
+
+.group-13{
+    grid-column-start: 13;
+}
+
+.group-14{
+    grid-column-start: 14;
+}
+
+.group-15{
+    grid-column-start: 15;
+}
+
+.group-16{
+    grid-column-start: 16;
+}
+
+.group-17{
+    grid-column-start: 17;
+}
+
+.group-18{
+    grid-column-start: 18;
+}
+
 .nonmetal{
     background: pink;
 }

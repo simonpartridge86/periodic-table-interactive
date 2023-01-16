@@ -2,10 +2,12 @@ import styles from "../styles/index.module.css";
 import { GetStaticProps } from "next";
 import ElementCard from "../components/ElementCard";
 import { Element, GetPeriodicTable } from "../types";
+import { isAsExpression } from "typescript";
 
 interface PageProps {
   elements: Element[];
 }
+type period = { id: number; content: Element[] };
 
 export const getStaticProps: GetStaticProps = async () => {
   const options = {
@@ -26,7 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default function Home({ elements }: PageProps) {
-  let periods: { id: number; content: Element[] }[] = [];
+  let periods: period[] = [];
 
   elements.forEach((element) => {
     const currentPeriod: number = Number(element.period);
@@ -42,14 +44,16 @@ export default function Home({ elements }: PageProps) {
       <h1>Periodic Table of Elements</h1>
       <div className={styles.table}>
         {periods.map((period) => {
+          const className = `period-${period.id}`;
           return (
-            <div className={styles.period} key={period.id}>
+            <div className={styles.className} key={period.id}>
               {period.content.map((element) => {
                 return (
                   <ElementCard
                     key={element.atomicNumber}
                     element={element}
-                    className={element.groupBlock}
+                    block={element.groupBlock}
+                    group={element.group}
                   />
                 );
               })}

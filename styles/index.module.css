@@ -10,10 +10,8 @@
     flex-direction: column;
 }
 
-.period {
+.period-1 {
     width: 100vw;
     height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex;
+    display: grid;
 }
